@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>821</width>
-    <height>570</height>
+    <width>1092</width>
+    <height>717</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -67,10 +67,16 @@
      </rect>
     </property>
     <property name="sizePolicy">
-     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
       <horstretch>5</horstretch>
       <verstretch>5</verstretch>
      </sizepolicy>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>5</width>
+      <height>10</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -94,7 +100,7 @@
      </rect>
     </property>
     <property name="sizePolicy">
-     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
       <horstretch>5</horstretch>
       <verstretch>5</verstretch>
      </sizepolicy>
@@ -114,7 +120,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>821</width>
+     <width>1092</width>
      <height>37</height>
     </rect>
    </property>
