@@ -66,22 +66,28 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>101</y>
-      <width>141</width>
+      <x>80</x>
+      <y>110</y>
+      <width>151</width>
       <height>51</height>
      </rect>
     </property>
     <property name="sizePolicy">
      <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
-      <horstretch>5</horstretch>
-      <verstretch>5</verstretch>
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
      </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>151</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="sizeIncrement">
      <size>
-      <width>5</width>
-      <height>10</height>
+      <width>0</width>
+      <height>0</height>
      </size>
     </property>
     <property name="font">
@@ -99,8 +105,8 @@
    <widget class="QRadioButton" name="radioButton">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>169</y>
+      <x>90</x>
+      <y>180</y>
       <width>221</width>
       <height>31</height>
      </rect>
