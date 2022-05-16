@@ -36,6 +36,12 @@
       <height>131</height>
      </rect>
     </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>10</width>
+      <height>19</height>
+     </size>
+    </property>
    </widget>
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
@@ -110,8 +116,24 @@
       <family>Arial</family>
      </font>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="text">
      <string>RadioButton</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="settingButton">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>480</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Settings</string>
     </property>
    </widget>
   </widget>
@@ -248,9 +270,26 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>settingButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setting()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>256</x>
+     <y>532</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>545</x>
+     <y>358</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>myclick()</slot>
   <slot>openFileDialog()</slot>
+  <slot>setting()</slot>
  </slots>
 </ui>
