@@ -55,6 +55,9 @@ class Ui_MainWindow(object):
         self.widget = QtWidgets.QWidget(self.centralwidget)
         self.widget.setGeometry(QtCore.QRect(330, 10, 551, 351))
         self.widget.setObjectName("widget")
+        self.xplot = QtWidgets.QPushButton(self.centralwidget)
+        self.xplot.setGeometry(QtCore.QRect(200, 540, 113, 41))
+        self.xplot.setObjectName("xplot")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1092, 37))
@@ -104,6 +107,7 @@ class Ui_MainWindow(object):
         self.pushButton.clicked.connect(MainWindow.myclick)
         self.actionOpen.triggered.connect(MainWindow.openFileDialog)
         self.settingButton.clicked.connect(MainWindow.setting)
+        self.xplot.clicked.connect(MainWindow.xplot)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -113,6 +117,7 @@ class Ui_MainWindow(object):
         self.pushButton.setText(_translate("MainWindow", "PushButton"))
         self.radioButton.setText(_translate("MainWindow", "RadioButton"))
         self.settingButton.setText(_translate("MainWindow", "Settings"))
+        self.xplot.setText(_translate("MainWindow", "Plot "))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.menuNew.setTitle(_translate("MainWindow", "Edit"))
         self.menuHelp.setTitle(_translate("MainWindow", "Help"))

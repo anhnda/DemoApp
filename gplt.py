@@ -8,18 +8,18 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Ui_cs(object):
-    def setupUi(self, cs):
-        cs.setObjectName("cs")
-        cs.resize(496, 383)
-        self.widget = QtWidgets.QWidget(cs)
+class Ui_popDialog(object):
+    def setupUi(self, popDialog):
+        popDialog.setObjectName("popDialog")
+        popDialog.resize(496, 383)
+        self.widget = QtWidgets.QWidget(popDialog)
         self.widget.setGeometry(QtCore.QRect(19, 19, 461, 341))
         self.widget.setObjectName("widget")
 
-        self.retranslateUi(cs)
-        QtCore.QMetaObject.connectSlotsByName(cs)
+        self.retranslateUi(popDialog)
+        QtCore.QMetaObject.connectSlotsByName(popDialog)
 
-    def retranslateUi(self, cs):
+    def retranslateUi(self, popDialog):
         _translate = QtCore.QCoreApplication.translate
-        cs.setWindowTitle(_translate("cs", "TTTTT"))
+        popDialog.setWindowTitle(_translate("popDialog", "TTTTT"))
 

@@ -136,6 +136,19 @@
      </rect>
     </property>
    </widget>
+   <widget class="QPushButton" name="xplot">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>540</y>
+      <width>113</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Plot </string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -286,10 +299,27 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>xplot</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>xplot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>256</x>
+     <y>597</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>545</x>
+     <y>358</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>myclick()</slot>
   <slot>openFileDialog()</slot>
   <slot>setting()</slot>
+  <slot>xplot()</slot>
  </slots>
 </ui>
