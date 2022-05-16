@@ -3,7 +3,8 @@ import time
 
 import numpy as np
 
-from matplotlib.backends.qt_compat import QtWidgets
+# from matplotlib.backends.qt_compat import QtWidgets
+from PyQt5 import QtWidgets
 from matplotlib.backends.backend_qtagg import (FigureCanvas, NavigationToolbar2QT as NavigationToolbar)
 from matplotlib.figure import Figure
 
@@ -15,20 +16,20 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.setCentralWidget(self._main)
         layout = QtWidgets.QVBoxLayout(self._main)
 
-        static_canvas = FigureCanvas(Figure(figsize=(5, 3)))
+        # static_canvas = FigureCanvas(Figure(figsize=(5, 3)))
         # Ideally one would use self.addToolBar here, but it is slightly
         # incompatible between PyQt6 and other bindings, so we just add the
         # toolbar as a plain widget instead.
-        layout.addWidget(NavigationToolbar(static_canvas, self))
-        layout.addWidget(static_canvas)
+        # ayout.addWidget(NavigationToolbar(static_canvas, self))
+        # layout.addWidget(static_canvas)
 
         dynamic_canvas = FigureCanvas(Figure(figsize=(5, 3)))
         layout.addWidget(dynamic_canvas)
         layout.addWidget(NavigationToolbar(dynamic_canvas, self))
 
-        self._static_ax = static_canvas.figure.subplots()
-        t = np.linspace(0, 10, 501)
-        self._static_ax.plot(t, np.tan(t), ".")
+        # self._static_ax = static_canvas.figure.subplots()
+        # t = np.linspace(0, 10, 501)
+        # self._static_ax.plot(t, np.tan(t), ".")
 
         self._dynamic_ax = dynamic_canvas.figure.subplots()
         t = np.linspace(0, 10, 101)
