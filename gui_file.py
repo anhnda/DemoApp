@@ -36,6 +36,8 @@ class Ui_MainWindow(object):
         font.setFamily("Arial")
         self.pushButton.setFont(font)
         self.pushButton.setMouseTracking(False)
+        self.pushButton.setStyleSheet("padding-left: 5px; padding-right: 5px;\n"
+"padding-top: 3px; padding-bottom: 3px;")
         self.pushButton.setObjectName("pushButton")
         self.radioButton = QtWidgets.QRadioButton(self.centralwidget)
         self.radioButton.setGeometry(QtCore.QRect(90, 180, 221, 31))
@@ -48,9 +50,13 @@ class Ui_MainWindow(object):
         font.setFamily("Arial")
         self.radioButton.setFont(font)
         self.radioButton.setAutoFillBackground(False)
+        self.radioButton.setStyleSheet("padding-left: 5px; padding-right: 5px;\n"
+"padding-top: 3px; padding-bottom: 3px;")
         self.radioButton.setObjectName("radioButton")
         self.settingButton = QtWidgets.QPushButton(self.centralwidget)
         self.settingButton.setGeometry(QtCore.QRect(200, 480, 113, 32))
+        self.settingButton.setStyleSheet("padding-left: 5px; padding-right: 5px;\n"
+"padding-top: 3px; padding-bottom: 3px;")
         self.settingButton.setObjectName("settingButton")
         self.widget = QtWidgets.QWidget(self.centralwidget)
         self.widget.setGeometry(QtCore.QRect(330, 10, 551, 351))
