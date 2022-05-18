@@ -15,7 +15,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(190, 400, 491, 71))
+        self.label.setGeometry(QtCore.QRect(210, 400, 141, 51))
         self.label.setObjectName("label")
         self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
         self.textEdit.setGeometry(QtCore.QRect(140, 10, 104, 79))
@@ -25,7 +25,7 @@ class Ui_MainWindow(object):
         self.textBrowser.setObjectName("textBrowser")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(80, 110, 151, 51))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
 "padding-top: 3px; padding-bottom: 3px;")
         self.radioButton.setObjectName("radioButton")
         self.settingButton = QtWidgets.QPushButton(self.centralwidget)
-        self.settingButton.setGeometry(QtCore.QRect(200, 480, 113, 32))
+        self.settingButton.setGeometry(QtCore.QRect(200, 461, 113, 51))
         self.settingButton.setStyleSheet("padding-left: 5px; padding-right: 5px;\n"
 "padding-top: 3px; padding-bottom: 3px;\n"
 "margin:5px;")

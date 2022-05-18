@@ -17,10 +17,10 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>190</x>
+      <x>210</x>
       <y>400</y>
-      <width>491</width>
-      <height>71</height>
+      <width>141</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
@@ -57,7 +57,7 @@
      </rect>
     </property>
     <property name="sizePolicy">
-     <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
@@ -126,9 +126,9 @@ padding-top: 3px; padding-bottom: 3px;</string>
     <property name="geometry">
      <rect>
       <x>200</x>
-      <y>480</y>
+      <y>461</y>
       <width>113</width>
-      <height>32</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
