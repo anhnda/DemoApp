@@ -157,6 +157,7 @@ margin:5px;</string>
         <font>
          <family>Arial</family>
          <pointsize>13</pointsize>
+         <strikeout>false</strikeout>
         </font>
        </property>
        <property name="mouseTracking">

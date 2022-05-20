@@ -76,6 +76,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(13)
+        font.setStrikeOut(False)
         self.pushButton.setFont(font)
         self.pushButton.setMouseTracking(False)
         self.pushButton.setStyleSheet("padding-left: 5px; padding-right: 5px;\n"
