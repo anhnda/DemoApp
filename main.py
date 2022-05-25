@@ -10,7 +10,7 @@ from matplotlib.backends.backend_qtagg import (FigureCanvas, NavigationToolbar2Q
 from matplotlib.figure import Figure
 # import numpy as np
 import time
-
+import importlib
 from numpy import linspace
 from numpy import sin
 
@@ -131,6 +131,10 @@ class GUIX:
 
 
 if __name__ == "__main__":
+    if '_PYIBoot_SPLASH' in os.environ and importlib.util.find_spec("pyi_splash"):
+        import pyi_splash
+        pyi_splash.update_text('UI Loaded ...')
+        pyi_splash.close()
     app = QApplication(sys.argv)
 
     guix = GUIX(app)
