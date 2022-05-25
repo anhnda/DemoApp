@@ -1,10 +1,11 @@
 # from PyQt5 import QtWidgets
+import os.path
 import sys
 from gui_file import Ui_MainWindow
 from opt_gui import Ui_Dialog
 from gplt import Ui_popDialog
 from PyQt5.QtWidgets import QMainWindow, QFileDialog, QDialog, QApplication, QVBoxLayout
-
+from PyQt5.QtCore import QTranslator, QCoreApplication
 from matplotlib.backends.backend_qtagg import (FigureCanvas, NavigationToolbar2QT as NavigationToolbar)
 from matplotlib.figure import Figure
 # import numpy as np
@@ -13,7 +14,8 @@ import time
 from numpy import linspace
 from numpy import sin
 class GUIX:
-    def __init__(self):
+    def __init__(self, app : QApplication):
+        self.app = app
         self.mainWindow = QMainWindow()
         self.uiWinDow = Ui_MainWindow()
 
@@ -21,8 +23,15 @@ class GUIX:
         self.mainWindow.myclick = self.myclick
         self.mainWindow.setting = self.openSetting
         self.mainWindow.xplot = self.xplot
-
+        self.mainWindow.changLanguage = self.changeLanguage
+        self.translator = QTranslator()
+        # file = "/Users/anhnd/PycharmProjects/QTGUI" +"/rr.qm"
+        # print(file)
+        # print(translator.load(file))
+        # print("R", translator.translate("MainWindow", "MainWindow"))
+        self.app.installTranslator(self.translator)
         self.uiWinDow.setupUi(self.mainWindow)
+
 
     def show(self):
         self.mainWindow.show()
@@ -50,7 +59,18 @@ class GUIX:
         del optionUI
         self.plot()
 
-
+    def changeLanguage(self, b):
+        if not b:
+            return
+        sender = self.mainWindow.sender()
+        print(sender.objectName())
+        if sender.objectName().startswith("en"):
+            self.translator.load("")
+        else:
+            path = os.path.dirname(os.path.abspath(__file__)) +"/rr.qm"
+            print(self.translator.load(path))
+        # self.app.installTranslator(self.translator)
+        self.uiWinDow.retranslateUi(self.mainWindow)
     def xplot(self):
         dialog = QDialog()
         ui_plotDialog = Ui_popDialog()
@@ -108,7 +128,7 @@ class GUIX:
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
-    guix = GUIX()
+    guix = GUIX(app)
     guix.show()
 
     sys.exit(app.exec_())

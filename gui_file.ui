@@ -175,6 +175,32 @@ margin:5px;</string>
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>288</y>
+      <width>151</width>
+      <height>58</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QRadioButton" name="enToggle">
+       <property name="text">
+        <string>EN</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QRadioButton" name="vnToggle">
+       <property name="text">
+        <string>VI</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -341,11 +367,44 @@ margin:5px;</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>enToggle</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changLanguage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>174</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>545</x>
+     <y>358</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>vnToggle</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changLanguage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>174</x>
+     <y>365</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>545</x>
+     <y>358</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>myclick()</slot>
   <slot>openFileDialog()</slot>
   <slot>setting()</slot>
   <slot>xplot()</slot>
+  <slot>changLanguage()</slot>
  </slots>
 </ui>
