@@ -13,6 +13,8 @@ import time
 
 from numpy import linspace
 from numpy import sin
+
+
 class GUIX:
     def __init__(self, app : QApplication):
         self.app = app
@@ -67,7 +69,10 @@ class GUIX:
         if sender.objectName().startswith("en"):
             self.translator.load("")
         else:
-            path = os.path.dirname(os.path.abspath(__file__)) +"/rr.qm"
+            path = os.path.dirname(os.path.abspath(__file__)) +"/langx/rr.qm"
+            print(path)
+            self.uiWinDow.textBrowser.setText(path + " + " + self.app.applicationDirPath())
+
             print(self.translator.load(path))
         # self.app.installTranslator(self.translator)
         self.uiWinDow.retranslateUi(self.mainWindow)
