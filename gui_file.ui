@@ -109,8 +109,8 @@ margin:5px;</string>
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>530</y>
+      <x>0</x>
+      <y>580</y>
       <width>251</width>
       <height>80</height>
      </rect>
