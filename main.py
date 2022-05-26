@@ -1,6 +1,9 @@
 # from PyQt5 import QtWidgets
 import os.path
 import sys
+
+import PyQt5.QtWidgets
+
 from gui_file import Ui_MainWindow
 from opt_gui import Ui_Dialog
 from gplt import Ui_popDialog
@@ -137,7 +140,17 @@ if __name__ == "__main__":
         pyi_splash.close()
 
     # QFont.setPixelSize(5)
+    # font = QFont()
+    # print(font.pixelSize(), font.pointSize(), font.pointSizeF())
+    # font.setPointSize(5)
+    # font.setFamily("Arial")
+    # print(font.pixelSize(), font.pointSize(), font.pointSizeF())
+
     app = QApplication(sys.argv)
+    font = QFont()
+    font.setPixelSize(13)
+
+    app.setFont(font)
 
     guix = GUIX(app)
     guix.show()

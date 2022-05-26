@@ -31,7 +31,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.radioButton.sizePolicy().hasHeightForWidth())
         self.radioButton.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
+        print("RD S0", font.pointSize(), font.pixelSize())
         font.setFamily("Arial")
+        print("RD S", font.pointSize(), font.pixelSize())
         self.radioButton.setFont(font)
         self.radioButton.setAutoFillBackground(False)
         self.radioButton.setStyleSheet("padding-left: 5px; padding-right: 5px;\n"
