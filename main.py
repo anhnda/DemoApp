@@ -154,7 +154,7 @@ if __name__ == "__main__":
     print("Px ratio", app.primaryScreen().devicePixelRatio())
     print(app.primaryScreen().physicalSize())
     font = QFont()
-    font.setPointSize(int(13 * v))
+    font.setPixelSize(int(13 * v))
 
     app.setFont(font)
 
