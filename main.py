@@ -147,11 +147,14 @@ if __name__ == "__main__":
     # print(font.pixelSize(), font.pointSize(), font.pointSizeF())
 
     app = QApplication(sys.argv)
+    STANDARD = 60
+    v = app.primaryScreen().physicalDotsPerInch() / app.primaryScreen().devicePixelRatio() / STANDARD
+    print("V: ", v)
     print("SDPI", app.primaryScreen().physicalDotsPerInchY(), app.primaryScreen().physicalDotsPerInch())
     print("Px ratio", app.primaryScreen().devicePixelRatio())
     print(app.primaryScreen().physicalSize())
     font = QFont()
-    font.setPixelSize(13)
+    font.setPointSize(int(13 * v))
 
     app.setFont(font)
 
