@@ -13,7 +13,7 @@ import time
 import importlib
 from numpy import linspace
 from numpy import sin
-
+from PyQt5.QtGui import QFont
 
 class GUIX:
     def __init__(self, app : QApplication):
@@ -135,6 +135,8 @@ if __name__ == "__main__":
         import pyi_splash
         pyi_splash.update_text('UI Loaded ...')
         pyi_splash.close()
+
+    # QFont.setPixelSize(5)
     app = QApplication(sys.argv)
 
     guix = GUIX(app)

@@ -69,9 +69,6 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(1)
         sizePolicy.setHeightForWidth(self.xplot.sizePolicy().hasHeightForWidth())
         self.xplot.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        self.xplot.setFont(font)
         self.xplot.setStyleSheet("padding-left: 5px; padding-right: 5px;\n"
 "padding-top: 3px; padding-bottom: 3px;\n"
 "margin:5px;")
@@ -84,11 +81,6 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
         self.pushButton.setSizePolicy(sizePolicy)
         self.pushButton.setSizeIncrement(QtCore.QSize(0, 0))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(13)
-        font.setStrikeOut(False)
-        self.pushButton.setFont(font)
         self.pushButton.setMouseTracking(False)
         self.pushButton.setStyleSheet("padding-left: 5px; padding-right: 5px;\n"
 "padding-top: 3px; padding-bottom: 3px;\n"
